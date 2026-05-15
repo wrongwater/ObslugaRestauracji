@@ -1,8 +1,8 @@
-public class Employee extends Person {
+public class Pracownik extends Osoba {
 
     private String position;
 
-    public Employee(String name, String position) {
+    public Pracownik(String name, String position) {
         super(name);
         this.position = position;
     }
@@ -15,7 +15,7 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{name='" + getName() +
+        return "Pracownik{name='" + getName() +
                 "', position='" + position + "'}";
     }
 }

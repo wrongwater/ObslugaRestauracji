@@ -1,4 +1,4 @@
-public class Restaurant {
+public class Restauracja {
 
     public static final String NAME =
             "Restauracja";

@@ -1,8 +1,8 @@
-public abstract class Person {
+public abstract class Osoba {
 
     private String name;
 
-    public Person(String name) {
+    public Osoba(String name) {
         this.name = name;
     }
 

@@ -5,8 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ConsoleUI ui =
-                new ConsoleUI();
+        MenuKonsoli ui =
+                new MenuKonsoli();
 
         ui.start();
 
@@ -20,78 +20,78 @@ public class Main {
 
         int[] tables = {1,2,3};
 
-        Drink[] drinks =
-                new Drink[2];
+        Napoj[] napoje =
+                new Napoj[2];
 
         // ===== OBIEKTY =====
 
-        Food f1 =
-                new Food("Pizza",35,800);
+        Jedzenie f1 =
+                new Jedzenie("Pizza",35,800);
 
-        Food f2 =
-                new Food("Burger",25,600);
+        Jedzenie f2 =
+                new Jedzenie("Burger",25,600);
 
-        Drink d1 =
-                new Drink("Cola",10,true);
+        Napoj d1 =
+                new Napoj("Cola",10,true);
 
-        Drink d2 =
-                new Drink("Tea",8,false);
+        Napoj d2 =
+                new Napoj("Tea",8,false);
 
-        Employee e1 =
-                new Employee("Jan","Kelner");
+        Pracownik e1 =
+                new Pracownik("Jan","Kelner");
 
-        Employee e2 =
-                new Employee("Adam","Kucharz");
+        Pracownik e2 =
+                new Pracownik("Adam","Kucharz");
 
-        Customer c1 =
-                new Customer("Kamil",1);
+        Klient c1 =
+                new Klient("Kamil",1);
 
-        Customer c2 =
-                new Customer("Ola",2);
+        Klient c2 =
+                new Klient("Ola",2);
 
-        Table t1 = new Table(1);
-        Table t2 = new Table(2);
+        Stol t1 = new Stol(1);
+        Stol t2 = new Stol(2);
 
         // ===== UPCASTING =====
 
-        Product product =
-                new Food("Steak",50,900);
+        Produkt produkt =
+                new Jedzenie("Steak",50,900);
 
         // ===== DOWNCASTING =====
 
-        if(product instanceof Food) {
+        if(produkt instanceof Jedzenie) {
 
-            Food food =
-                    (Food) product;
+            Jedzenie jedzenie =
+                    (Jedzenie) produkt;
 
             System.out.println(
-                    food.getName());
+                    jedzenie.getName());
         }
 
         // ===== SORTOWANIE =====
 
-        List<Food> foodList =
+        List<Jedzenie> jedzenieList =
                 new ArrayList<>();
 
-        foodList.add(f1);
-        foodList.add(f2);
+        jedzenieList.add(f1);
+        jedzenieList.add(f2);
 
-        OrderManager manager =
-                new OrderManager();
+        MenedzerZamowien manager =
+                new MenedzerZamowien();
 
-        manager.sortFoods(foodList);
+        manager.sortFoods(jedzenieList);
 
-        List<Product> products =
+        List<Produkt> produkty =
                 new ArrayList<>();
 
-        products.add(f1);
-        products.add(d1);
+        produkty.add(f1);
+        produkty.add(d1);
 
-        manager.sortProducts(products);
+        manager.sortProducts(produkty);
 
         // ===== METODA GENERYCZNA =====
 
-        Utils.printList(products);
+        Zastosowania.printList(produkty);
 
         // ===== WYWOŁANIA =====
 
@@ -99,9 +99,9 @@ public class Main {
         c1.showInfo();
 
         System.out.println(
-                Restaurant.NAME);
+                Restauracja.NAME);
 
         System.out.println(
-                Restaurant.getOrderCounter());
+                Restauracja.getOrderCounter());
     }
 }

@@ -1,15 +1,13 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
-public class ConsoleUI {
+public class MenuKonsoli {
 
     public void start() {
 
         Scanner scanner = new Scanner(System.in);
 
-        OrderManager manager =
-                new OrderManager();
+        MenedzerZamowien manager =
+                new MenedzerZamowien();
 
         boolean running = true;
 
@@ -40,13 +38,13 @@ public class ConsoleUI {
                         if(table <= 0) {
 
                             throw new
-                                    InvalidOrderException(
+                                    WyjatekNiewlasciwegoZamowienia(
                                     "Niepoprawny numer stolika!"
                             );
                         }
 
-                        Order order =
-                                new Order(table);
+                        Zamowienie zamowienie =
+                                new Zamowienie(table);
 
                         System.out.println(
                                 "Podaj jedzenie:");
@@ -54,8 +52,8 @@ public class ConsoleUI {
                         String foodName =
                                 scanner.nextLine();
 
-                        Food food =
-                                new Food(
+                        Jedzenie jedzenie =
+                                new Jedzenie(
                                         foodName,
                                         30,
                                         500
@@ -67,23 +65,23 @@ public class ConsoleUI {
                         String drinkName =
                                 scanner.nextLine();
 
-                        Drink drink =
-                                new Drink(
+                        Napoj napoj =
+                                new Napoj(
                                         drinkName,
                                         10,
                                         true
                                 );
 
-                        order.addProduct(food);
-                        order.addProduct(drink);
+                        zamowienie.addProduct(jedzenie);
+                        zamowienie.addProduct(napoj);
 
-                        manager.addOrder(order);
+                        manager.addOrder(zamowienie);
 
                         System.out.println(
                                 "Dodano zamowienie!");
 
                     } catch (
-                            InvalidOrderException e) {
+                            WyjatekNiewlasciwegoZamowienia e) {
 
                         System.out.println(
                                 e.getMessage());

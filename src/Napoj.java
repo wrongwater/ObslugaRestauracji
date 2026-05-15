@@ -1,8 +1,8 @@
-public class Drink extends Product {
+public class Napoj extends Produkt {
 
     private boolean cold;
 
-    public Drink(String name,
+    public Napoj(String name,
                  double price,
                  boolean cold) {
 
@@ -17,7 +17,7 @@ public class Drink extends Product {
 
     @Override
     public String toString() {
-        return "Drink{name='" + getName() +
+        return "Napoj{name='" + getName() +
                 "', price=" + getPrice() + "}";
     }
 }

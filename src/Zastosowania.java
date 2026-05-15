@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Utils {
+public class Zastosowania {
 
     public static <T> void printList(
             List<T> list) {

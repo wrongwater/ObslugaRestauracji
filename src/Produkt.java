@@ -1,11 +1,11 @@
 import java.util.Objects;
 
-public abstract class Product {
+public abstract class Produkt {
 
     private String name;
     private double price;
 
-    public Product(String name, double price) {
+    public Produkt(String name, double price) {
         this.name = name;
         this.price = price;
     }
@@ -30,11 +30,11 @@ public abstract class Product {
 
         if (this == o) return true;
 
-        if (!(o instanceof Product)) return false;
+        if (!(o instanceof Produkt)) return false;
 
-        Product product = (Product) o;
+        Produkt produkt = (Produkt) o;
 
-        return Objects.equals(name, product.name);
+        return Objects.equals(name, produkt.name);
     }
 
     @Override

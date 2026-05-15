@@ -1,4 +1,4 @@
-public enum OrderStatus {
+public enum StatusZamowienia {
     NEW,
     PREPARING,
     COMPLETED

@@ -1,8 +1,8 @@
-public class Table {
+public class Stol {
 
     private int number;
 
-    public Table(int number) {
+    public Stol(int number) {
         this.number = number;
     }
 
@@ -12,6 +12,6 @@ public class Table {
 
     @Override
     public String toString() {
-        return "Table{number=" + number + "}";
+        return "Stol{number=" + number + "}";
     }
 }

@@ -1,11 +1,11 @@
-public class Food extends Product
-        implements Comparable<Food> {
+public class Jedzenie extends Produkt
+        implements Comparable<Jedzenie> {
 
     private int calories;
 
-    public Food(String name,
-                double price,
-                int calories) {
+    public Jedzenie(String name,
+                    double price,
+                    int calories) {
 
         super(name, price);
         this.calories = calories;
@@ -17,7 +17,7 @@ public class Food extends Product
     }
 
     @Override
-    public int compareTo(Food other) {
+    public int compareTo(Jedzenie other) {
         return Double.compare(
                 this.getPrice(),
                 other.getPrice()
@@ -26,7 +26,7 @@ public class Food extends Product
 
     @Override
     public String toString() {
-        return "Food{name='" + getName() +
+        return "Jedzenie{name='" + getName() +
                 "', price=" + getPrice() + "}";
     }
 }

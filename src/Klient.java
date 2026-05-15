@@ -1,8 +1,8 @@
-public class Customer extends Person {
+public class Klient extends Osoba {
 
     private int tableNumber;
 
-    public Customer(String name, int tableNumber) {
+    public Klient(String name, int tableNumber) {
         super(name);
         this.tableNumber = tableNumber;
     }
@@ -15,7 +15,7 @@ public class Customer extends Person {
 
     @Override
     public String toString() {
-        return "Customer{name='" + getName()
+        return "Klient{name='" + getName()
                 + "', table=" + tableNumber + "}";
     }
 }
