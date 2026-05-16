@@ -12,13 +12,13 @@ public class Main {
 
         // ===== TABLICE =====
 
-        String[] foods = {
+        String[] jedzenia = {
                 "Pizza",
                 "Burger",
                 "Pasta"
         };
 
-        int[] tables = {1,2,3};
+        int[] stoly = {1,2,3};
 
         Napoj[] napoje =
                 new Napoj[2];
@@ -32,10 +32,10 @@ public class Main {
                 new Jedzenie("Burger",25,600);
 
         Napoj d1 =
-                new Napoj("Cola",10,true);
+                new Napoj("Kola",10,true);
 
         Napoj d2 =
-                new Napoj("Tea",8,false);
+                new Napoj("Herbata",8,false);
 
         Pracownik e1 =
                 new Pracownik("Jan","Kelner");
@@ -55,7 +55,7 @@ public class Main {
         // ===== UPCASTING =====
 
         Produkt produkt =
-                new Jedzenie("Steak",50,900);
+                new Jedzenie("Kotlet",50,900);
 
         // ===== DOWNCASTING =====
 
@@ -65,7 +65,7 @@ public class Main {
                     (Jedzenie) produkt;
 
             System.out.println(
-                    jedzenie.getName());
+                    jedzenie.getNazwa());
         }
 
         // ===== SORTOWANIE =====
@@ -99,7 +99,7 @@ public class Main {
         c1.showInfo();
 
         System.out.println(
-                Restauracja.NAME);
+                Restauracja.NAZWA);
 
         System.out.println(
                 Restauracja.getOrderCounter());

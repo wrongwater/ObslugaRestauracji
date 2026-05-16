@@ -1,21 +1,21 @@
 public class Pracownik extends Osoba {
 
-    private String position;
+    private String pozycja;
 
-    public Pracownik(String name, String position) {
-        super(name);
-        this.position = position;
+    public Pracownik(String nazwa, String pozycja) {
+        super(nazwa);
+        this.pozycja = pozycja;
     }
 
     @Override
     public void showInfo() {
-        System.out.println("Pracownik: " + getName()
-                + " | Stanowisko: " + position);
+        System.out.println("Pracownik: " + getNazwa()
+                + " | Stanowisko: " + pozycja);
     }
 
     @Override
     public String toString() {
-        return "Pracownik{name='" + getName() +
-                "', position='" + position + "'}";
+        return "Pracownik{nazwa='" + getNazwa() +
+                "', pozycja='" + pozycja + "'}";
     }
 }

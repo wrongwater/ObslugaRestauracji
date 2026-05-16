@@ -4,31 +4,31 @@ import java.util.List;
 public class Zamowienie
         implements Wyswietlane {
 
-    private int tableNumber;
+    private int stolNumer;
 
     private List<Produkt> produkty;
 
     private StatusZamowienia status;
 
-    public Zamowienie(int tableNumber) {
+    public Zamowienie(int stolNumer) {
 
-        this.tableNumber = tableNumber;
+        this.stolNumer = stolNumer;
 
         produkty = new ArrayList<>();
 
-        status = StatusZamowienia.NEW;
+        status = StatusZamowienia.NOWE;
     }
 
-    public void addProduct(Produkt produkt) {
+    public void dodajProdukt(Produkt produkt) {
         produkty.add(produkt);
     }
 
-    public double calculateTotal() {
+    public double obliczCalosc() {
 
         double total = 0;
 
         for(Produkt p : produkty) {
-            total += p.calculatePrice();
+            total += p.obliczCena();
         }
 
         return total;
@@ -46,8 +46,8 @@ public class Zamowienie
 
     @Override
     public String toString() {
-        return "Zamowienie{table=" + tableNumber +
+        return "Zamowienie{stol=" + stolNumer +
                 ", status=" + status +
-                ", total=" + calculateTotal() + "}";
+                ", total=" + obliczCalosc() + "}";
     }
 }

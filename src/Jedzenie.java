@@ -1,32 +1,32 @@
 public class Jedzenie extends Produkt
         implements Comparable<Jedzenie> {
 
-    private int calories;
+    private int kalorie;
 
-    public Jedzenie(String name,
-                    double price,
-                    int calories) {
+    public Jedzenie(String nazwa,
+                    double cena,
+                    int kalorie) {
 
-        super(name, price);
-        this.calories = calories;
+        super(nazwa, cena);
+        this.kalorie = kalorie;
     }
 
     @Override
-    public double calculatePrice() {
-        return getPrice();
+    public double obliczCena() {
+        return getCena();
     }
 
     @Override
     public int compareTo(Jedzenie other) {
         return Double.compare(
-                this.getPrice(),
-                other.getPrice()
+                this.getCena(),
+                other.getCena()
         );
     }
 
     @Override
     public String toString() {
-        return "Jedzenie{name='" + getName() +
-                "', price=" + getPrice() + "}";
+        return "Jedzenie{nazwa='" + getNazwa() +
+                "', cena=" + getCena() + "}";
     }
 }

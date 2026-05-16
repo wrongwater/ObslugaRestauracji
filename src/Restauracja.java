@@ -1,6 +1,6 @@
 public class Restauracja {
 
-    public static final String NAME =
+    public static final String NAZWA =
             "Restauracja";
 
     private static int orderCounter = 0;

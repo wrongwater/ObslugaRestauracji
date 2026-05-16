@@ -1,13 +1,13 @@
 public abstract class Osoba {
 
-    private String name;
+    private String nazwa;
 
-    public Osoba(String name) {
-        this.name = name;
+    public Osoba(String nazwa) {
+        this.nazwa = nazwa;
     }
 
-    public String getName() {
-        return name;
+    public String getNazwa() {
+        return nazwa;
     }
 
     public abstract void showInfo();

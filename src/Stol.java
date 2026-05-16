@@ -1,17 +1,17 @@
 public class Stol {
 
-    private int number;
+    private int numer;
 
-    public Stol(int number) {
-        this.number = number;
+    public Stol(int numer) {
+        this.numer = numer;
     }
 
-    public int getNumber() {
-        return number;
+    public int getNumer() {
+        return numer;
     }
 
     @Override
     public String toString() {
-        return "Stol{number=" + number + "}";
+        return "Stol{numer=" + numer + "}";
     }
 }

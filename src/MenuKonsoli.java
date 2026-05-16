@@ -9,19 +9,19 @@ public class MenuKonsoli {
         MenedzerZamowien manager =
                 new MenedzerZamowien();
 
-        boolean running = true;
+        boolean konsolaaktywowana = true;
 
-        while(running) {
+        while(konsolaaktywowana) {
 
             System.out.println("\n=== MENU ===");
             System.out.println("1. Dodaj zamowienie");
             System.out.println("2. Pokaz zamowienia");
             System.out.println("3. Wyjdz");
 
-            int choice = scanner.nextInt();
+            int wybor = scanner.nextInt();
             scanner.nextLine();
 
-            switch(choice) {
+            switch(wybor) {
 
                 case 1:
 
@@ -30,31 +30,31 @@ public class MenuKonsoli {
                         System.out.println(
                                 "Podaj numer stolika:");
 
-                        int table =
+                        int stol =
                                 scanner.nextInt();
 
                         scanner.nextLine();
 
-                        if(table <= 0) {
+                        if(stol <= 0) {
 
                             throw new
                                     WyjatekNiewlasciwegoZamowienia(
-                                    "Niepoprawny numer stolika!"
+                                    "Niepoprawny numer stolika."
                             );
                         }
 
                         Zamowienie zamowienie =
-                                new Zamowienie(table);
+                                new Zamowienie(stol);
 
                         System.out.println(
                                 "Podaj jedzenie:");
 
-                        String foodName =
+                        String jedzenieNazwa =
                                 scanner.nextLine();
 
                         Jedzenie jedzenie =
                                 new Jedzenie(
-                                        foodName,
+                                        jedzenieNazwa,
                                         30,
                                         500
                                 );
@@ -62,18 +62,18 @@ public class MenuKonsoli {
                         System.out.println(
                                 "Podaj napoj:");
 
-                        String drinkName =
+                        String napojNazwa =
                                 scanner.nextLine();
 
                         Napoj napoj =
                                 new Napoj(
-                                        drinkName,
+                                        napojNazwa,
                                         10,
                                         true
                                 );
 
-                        zamowienie.addProduct(jedzenie);
-                        zamowienie.addProduct(napoj);
+                        zamowienie.dodajProdukt(jedzenie);
+                        zamowienie.dodajProdukt(napoj);
 
                         manager.addOrder(zamowienie);
 
@@ -98,7 +98,7 @@ public class MenuKonsoli {
 
                 case 3:
 
-                    running = false;
+                    konsolaaktywowana = false;
 
                     break;
 

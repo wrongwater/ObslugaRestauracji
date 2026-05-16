@@ -2,27 +2,27 @@ import java.util.Objects;
 
 public abstract class Produkt {
 
-    private String name;
-    private double price;
+    private String nazwa;
+    private double cena;
 
-    public Produkt(String name, double price) {
-        this.name = name;
-        this.price = price;
+    public Produkt(String nazwa, double cena) {
+        this.nazwa = nazwa;
+        this.cena = cena;
     }
 
-    public abstract double calculatePrice();
+    public abstract double obliczCena();
 
-    public String getName() {
-        return name;
+    public String getNazwa() {
+        return nazwa;
     }
 
-    public double getPrice() {
-        return price;
+    public double getCena() {
+        return cena;
     }
 
     @Override
     public String toString() {
-        return name + " - " + price + " zl";
+        return nazwa + " - " + cena + " zl";
     }
 
     @Override
@@ -34,11 +34,11 @@ public abstract class Produkt {
 
         Produkt produkt = (Produkt) o;
 
-        return Objects.equals(name, produkt.name);
+        return Objects.equals(nazwa, produkt.nazwa);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name);
+        return Objects.hash(nazwa);
     }
 }

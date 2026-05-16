@@ -1,23 +1,23 @@
 public class Napoj extends Produkt {
 
-    private boolean cold;
+    private boolean zimny;
 
-    public Napoj(String name,
-                 double price,
-                 boolean cold) {
+    public Napoj(String nazwa,
+                 double cena,
+                 boolean zimny) {
 
-        super(name, price);
-        this.cold = cold;
+        super(nazwa, cena);
+        this.zimny = zimny;
     }
 
     @Override
-    public double calculatePrice() {
-        return getPrice();
+    public double obliczCena() {
+        return getCena();
     }
 
     @Override
     public String toString() {
-        return "Napoj{name='" + getName() +
-                "', price=" + getPrice() + "}";
+        return "Napoj{nazwa='" + getNazwa() +
+                "', cena=" + getCena() + "}";
     }
 }

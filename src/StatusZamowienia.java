@@ -1,5 +1,5 @@
 public enum StatusZamowienia {
-    NEW,
-    PREPARING,
-    COMPLETED
+    NOWE,
+    WPRZYGOTOWANIU,
+    GOTOWE
 }

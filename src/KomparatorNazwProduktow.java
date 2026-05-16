@@ -7,7 +7,7 @@ public class KomparatorNazwProduktow
     public int compare(Produkt p1,
                        Produkt p2) {
 
-        return p1.getName()
-                .compareTo(p2.getName());
+        return p1.getNazwa()
+                .compareTo(p2.getNazwa());
     }
 }

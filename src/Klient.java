@@ -1,21 +1,21 @@
 public class Klient extends Osoba {
 
-    private int tableNumber;
+    private int stolNumer;
 
-    public Klient(String name, int tableNumber) {
-        super(name);
-        this.tableNumber = tableNumber;
+    public Klient(String nazwa, int stolNumer) {
+        super(nazwa);
+        this.stolNumer = stolNumer;
     }
 
     @Override
     public void showInfo() {
-        System.out.println("Klient: " + getName()
-                + " | Stolik: " + tableNumber);
+        System.out.println("Klient: " + getNazwa()
+                + " | Stolik: " + stolNumer);
     }
 
     @Override
     public String toString() {
-        return "Klient{name='" + getName()
-                + "', table=" + tableNumber + "}";
+        return "Klient{nazwa='" + getNazwa()
+                + "', stol=" + stolNumer + "}";
     }
 }
