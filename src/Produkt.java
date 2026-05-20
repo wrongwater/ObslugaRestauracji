@@ -1,5 +1,5 @@
 import java.util.Objects;
-
+//implementacja hierarchii dziedziczenia
 public abstract class Produkt {
 
     private String nazwa;

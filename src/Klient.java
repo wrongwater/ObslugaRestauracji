@@ -1,3 +1,4 @@
+//implementacja hierarchii dziedziczenia
 public class Klient extends Osoba {
 
     private int stolNumer;

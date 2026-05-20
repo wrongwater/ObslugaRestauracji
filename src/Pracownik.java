@@ -1,3 +1,4 @@
+//implementacja hierarchii dziedziczenia
 public class Pracownik extends Osoba {
 
     private String pozycja;
