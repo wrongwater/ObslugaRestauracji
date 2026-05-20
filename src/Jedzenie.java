@@ -1,3 +1,4 @@
+//implementacja hierarchii dziedziczenia
 public class Jedzenie extends Produkt
         implements Comparable<Jedzenie> {
 
@@ -23,7 +24,7 @@ public class Jedzenie extends Produkt
                 other.getCena()
         );
     }
-
+//nadpisanie metody toString
     @Override
     public String toString() {
         return "Jedzenie{nazwa='" + getNazwa() +

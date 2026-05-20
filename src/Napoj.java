@@ -14,7 +14,7 @@ public class Napoj extends Produkt {
     public double obliczCena() {
         return getCena();
     }
-
+//nadpisanie metody toString
     @Override
     public String toString() {
         return "Napoj{nazwa='" + getNazwa() +
